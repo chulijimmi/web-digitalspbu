@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Link } from "theme-ui"
+import { jsx } from "theme-ui"
+import { Link } from "gatsby"
 import colors from "../../theme/colors"
 import BackgroundFooter from "../../images/bg-footer.png"
 
@@ -12,6 +13,10 @@ function Navigation({ to, label }) {
         fontSize: "14px",
         color: colors.dark,
         marginRight: "40px",
+        textDecoration: "underline",
+        ":hover": {
+          color: colors.primary,
+        },
       }}
     >
       {label}
@@ -43,13 +48,11 @@ function Footer() {
           paddingBottom: "32px",
         }}
       >
-        <ul sx={{ listStyleType: "none", margin: "0px", padding: "0px" }}>
-          <li sx={{ margin: "0px", padding: "0px" }}>
-            <Navigation to={"/"} label={"Kebijakan Privasi"} />
-            <Navigation to={"/"} label={"Ketentuan Cloud"} />
-            <Navigation to={"/"} label={"Hubungi Kami"} />
-          </li>
-        </ul>
+        <div>
+          <Navigation to={"/"} label={"Kebijakan Privasi"} />
+          <Navigation to={"/"} label={"Ketentuan Cloud"} />
+          <Navigation to={"/"} label={"Hubungi Kami"} />
+        </div>
         <span
           sx={{ fontFamily: "Roboto", fontSize: "14px", color: colors.dark }}
         >
