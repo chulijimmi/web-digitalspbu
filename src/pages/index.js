@@ -1,22 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import LineColorfull from "../components/layout/LineColorfull"
+import LandingBackground from "../components/layout/LandingBackground"
+import MainMenu from "../components/layout/MainMenu"
+import LandingBanner from "../components/landing-page/LanddingBanner"
+import LandingFeatures from "../components/landing-page/LandingFeatures"
+import ClientTestimonials from "../components/landing-page/CientTestimonials"
+import Footer from "../components/layout/Footer"
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to digitalspbu.</p>
-    <p>Update from code.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
+    <LandingBackground>
+      <LineColorfull />
+      <MainMenu />
+      <LandingBanner />
+      <LandingFeatures />
+    </LandingBackground>
+    <ClientTestimonials />
+    <Footer />
+  </>
 )
 
 export default IndexPage
